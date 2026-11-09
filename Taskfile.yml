@@ -1,0 +1,128 @@
+# The project's commands, run with Task (https://taskfile.dev):
+#
+#   task                  list them
+#   task run -- -n 1000   pass flags to the program after --
+#
+# Install Task with `brew install go-task`.
+version: "3"
+
+vars:
+  BIN: bin/evmgraph
+
+tasks:
+  default:
+    desc: List all tasks
+    silent: true
+    cmds:
+      - task --list
+
+  # --- Program -------------------------------------------------------------
+
+  # The program tasks build first and start the binary, not `go run`: Ctrl+C
+  # also reaches `go run`, which then exits with status 1 even after the
+  # program saved and stopped cleanly, so Task would report a failure.
+  run:
+    desc: "Generate and save the dataset (or load the saved one), then run until Ctrl+C (flags after --, e.g. task run -- -n 1000000; -h lists them)"
+    deps: [build]
+    cmds:
+      - ./{{.BIN}} run {{.CLI_ARGS}}
+
+  balance:
+    desc: "Print an address's balance from the saved dataset (task balance -- 0x...)"
+    deps: [build]
+    cmds:
+      - ./{{.BIN}} balance {{.CLI_ARGS}}
+
+  connections:
+    desc: "Print an address's connections, 2 levels deep (task connections -- [-limit N | -all] 0x...)"
+    deps: [build]
+    cmds:
+      - ./{{.BIN}} connections {{.CLI_ARGS}}
+
+  search:
+    desc: "A prompt: paste an address, see its balance and neighbours (task search -- [-limit N])"
+    deps: [build]
+    interactive: true
+    cmds:
+      - ./{{.BIN}} search {{.CLI_ARGS}}
+
+  update:
+    desc: "Change a balance or connect two addresses without rebuilding (task update -- balance 0x... <wei>, or link 0x... 0x...)"
+    deps: [build]
+    cmds:
+      - ./{{.BIN}} update {{.CLI_ARGS}}
+
+  install:
+    desc: "Install the evmgraph command into Go's bin folder, so it runs by name from anywhere (again after every change)"
+    cmds:
+      - go install ./cmd/evmgraph
+
+  build:
+    desc: "Build a static binary into bin/evmgraph"
+    sources: ["go.mod", "cmd/**/*.go", "internal/**/*.go"]
+    generates: ["{{.BIN}}"]
+    env:
+      CGO_ENABLED: "0"
+    cmds:
+      - go build -trimpath -o {{.BIN}} ./cmd/evmgraph
+
+  # --- Quality -------------------------------------------------------------
+
+  check:
+    desc: Everything before sharing a change - format check, vet, tests
+    cmds:
+      - |
+        files=$(gofmt -l .)
+        if [ -n "$files" ]; then
+          echo "$files"
+          echo "not formatted; run: task fmt"
+          exit 1
+        fi
+      - go vet ./...
+      - task: test
+
+  fmt:
+    desc: Format all Go code
+    cmds:
+      - gofmt -w .
+
+  test:
+    desc: Run every test (flags after --, e.g. task test -- -run TestSearch -v)
+    cmds:
+      - go test ./... {{.CLI_ARGS}}
+
+  test:race:
+    desc: Run every test with the race detector
+    cmds:
+      - go test -race ./...
+
+  test:docker:
+    desc: "Run the program in Docker containers (needs Docker running): docker stop, restart, small disk, memory limit"
+    dir: tests/docker
+    cmds:
+      - go test -count=1 -v -timeout 15m ./... {{.CLI_ARGS}}
+
+  # --- Benchmarks ----------------------------------------------------------
+
+  bench:
+    desc: "Every benchmark under the same conditions (~20 min; COUNT=1 N=1000000 task bench for a quick one) into bench/results/<date-time>/"
+    cmds:
+      - bench/run.sh
+
+  bench:e2e:
+    desc: "The README's Measured table: the program end to end on N addresses (N=1000000 task bench:e2e for a quick one)"
+    cmds:
+      - go run ./bench/e2e -n {{.N | default 20000000}}
+
+  # --- Cleaning ------------------------------------------------------------
+
+  clean:
+    desc: Delete build output (bin/)
+    cmds:
+      - rm -rf bin
+
+  clean:cache:
+    desc: Delete the generated dataset (cache/); the next run regenerates it from the seed
+    prompt: Delete cache/? The next run regenerates it, which takes a while for large -n.
+    cmds:
+      - rm -rf cache

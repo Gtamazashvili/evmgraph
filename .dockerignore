@@ -1,0 +1,16 @@
+# Send Docker only what the build needs: the module files and the program's
+# source. Everything else stays out of the build context, above all cache/
+# (the generated dataset, gigabytes), and also bin/, the evmgraph binary built
+# for macOS, bench/ (and its results), .task/, docs/ and tests/ (the container
+# tests' own module). Listing what goes in, rather than what stays out, means
+# a new folder is left out until it is needed.
+*
+!go.mod
+!go.sum
+!cmd/
+!internal/
+
+# Tests are not part of the program: leaving them out means editing a test
+# does not rebuild the image.
+**/*_test.go
+**/testdata/

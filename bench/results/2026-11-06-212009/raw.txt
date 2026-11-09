@@ -1,0 +1,375 @@
+goos: darwin
+goarch: arm64
+pkg: evmgraph
+cpu: Apple M1 Pro
+BenchmarkGenerate-8   	      70	  16069865 ns/op	21316068 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      76	  14780808 ns/op	21315908 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      81	  14898640 ns/op	21315909 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      79	  16726296 ns/op	21315916 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      61	  19375480 ns/op	21315920 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      82	  24573482 ns/op	21315930 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      43	  38069119 ns/op	21315940 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      44	  32027571 ns/op	21315932 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      30	  40329179 ns/op	21315937 B/op	       3 allocs/op
+BenchmarkGenerate-8   	      68	  40560580 ns/op	21315927 B/op	       3 allocs/op
+PASS
+ok  	evmgraph	15.418s
+?   	evmgraph/bench/summarize	[no test files]
+goos: darwin
+goarch: arm64
+pkg: evmgraph/cacher
+cpu: Apple M1 Pro
+BenchmarkSave/binary-8  	      44	  25562348 ns/op	        20.00 file-MB	 1049859 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      62	  24821872 ns/op	        20.00 file-MB	 1049942 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      56	  23234181 ns/op	        20.00 file-MB	 1049826 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      48	  22176016 ns/op	        20.00 file-MB	 1049859 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      54	  21194056 ns/op	        20.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      67	  21411451 ns/op	        20.00 file-MB	 1049856 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      61	  21022151 ns/op	        20.00 file-MB	 1049858 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      67	  23653726 ns/op	        20.00 file-MB	 1049856 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      78	  17386941 ns/op	        20.00 file-MB	 1049856 B/op	      14 allocs/op
+BenchmarkSave/binary-8  	      75	  16913226 ns/op	        20.00 file-MB	 1049826 B/op	      14 allocs/op
+BenchmarkSave/gzip-8    	       4	 270579125 ns/op	        20.01 file-MB	 1863716 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 274060969 ns/op	        20.01 file-MB	 1863700 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 273887406 ns/op	        20.01 file-MB	 1863700 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 271734479 ns/op	        20.01 file-MB	 1863700 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 271931458 ns/op	        20.01 file-MB	 1863716 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 276913698 ns/op	        20.01 file-MB	 1863716 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 278639875 ns/op	        20.01 file-MB	 1863716 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 271034031 ns/op	        20.01 file-MB	 1863700 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 272646823 ns/op	        20.01 file-MB	 1863700 B/op	      31 allocs/op
+BenchmarkSave/gzip-8    	       4	 271449448 ns/op	        20.01 file-MB	 1863716 B/op	      31 allocs/op
+BenchmarkSave/text-8    	      33	  40636336 ns/op	        43.00 file-MB	 1049873 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      30	  41056097 ns/op	        43.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      30	  41237394 ns/op	        43.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      32	  40788911 ns/op	        43.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      31	  41574071 ns/op	        43.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      31	  41270706 ns/op	        43.00 file-MB	 1049873 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      30	  41013149 ns/op	        43.00 file-MB	 1049877 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      31	  41095476 ns/op	        43.00 file-MB	 1049873 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      31	  40763325 ns/op	        43.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/text-8    	      31	  41750128 ns/op	        43.00 file-MB	 1049873 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      30	  40964654 ns/op	        43.00 file-MB	 1049905 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      30	  41131911 ns/op	        43.00 file-MB	 1049905 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      31	  42154375 ns/op	        43.00 file-MB	 1049905 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      31	  50982122 ns/op	        43.00 file-MB	 1049905 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      16	  66300221 ns/op	        43.00 file-MB	 1049907 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      18	  67142049 ns/op	        43.00 file-MB	 1049906 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      19	  65236893 ns/op	        43.00 file-MB	 1049906 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      16	  65904927 ns/op	        43.00 file-MB	 1049907 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      19	  54154818 ns/op	        43.00 file-MB	 1049906 B/op	      14 allocs/op
+BenchmarkSave/text-mmap-8         	      25	  52670552 ns/op	        43.00 file-MB	 1049905 B/op	      14 allocs/op
+BenchmarkSave/csv-8               	       6	 173513014 ns/op	        49.89 file-MB	152769740 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       6	 180871125 ns/op	        49.89 file-MB	152768810 B/op	 3999915 allocs/op
+BenchmarkSave/csv-8               	       7	 166710512 ns/op	        49.89 file-MB	152768833 B/op	 3999915 allocs/op
+BenchmarkSave/csv-8               	       7	 168414220 ns/op	        49.89 file-MB	152768904 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       6	 175256180 ns/op	        49.89 file-MB	152768866 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       6	 178446750 ns/op	        49.89 file-MB	152768912 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       6	 171593715 ns/op	        49.89 file-MB	152768842 B/op	 3999915 allocs/op
+BenchmarkSave/csv-8               	       6	 169110590 ns/op	        49.89 file-MB	152768832 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       7	 169271821 ns/op	        49.89 file-MB	152768897 B/op	 3999916 allocs/op
+BenchmarkSave/csv-8               	       7	 168549018 ns/op	        49.89 file-MB	152768846 B/op	 3999916 allocs/op
+BenchmarkSave/json-8              	      21	  58509651 ns/op	        45.00 file-MB	 1049874 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      19	  55220882 ns/op	        45.00 file-MB	 1049858 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      21	  56643827 ns/op	        45.00 file-MB	 1049874 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      24	  50723590 ns/op	        45.00 file-MB	 1049874 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      25	  49780367 ns/op	        45.00 file-MB	 1049857 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      26	  54535042 ns/op	        45.00 file-MB	 1049873 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      19	  58053211 ns/op	        45.00 file-MB	 1049874 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      16	  64167911 ns/op	        45.00 file-MB	 1049875 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      20	  81001417 ns/op	        45.00 file-MB	 1049885 B/op	      14 allocs/op
+BenchmarkSave/json-8              	      16	  91133776 ns/op	        45.00 file-MB	 1049875 B/op	      14 allocs/op
+BenchmarkSave/gob-8               	       4	 259981990 ns/op	        31.00 file-MB	18691364 B/op	     128 allocs/op
+BenchmarkSave/gob-8               	       4	 257824833 ns/op	        31.00 file-MB	18688960 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       4	 257394073 ns/op	        31.00 file-MB	18688916 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       4	 251598469 ns/op	        31.00 file-MB	18688932 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       5	 248867675 ns/op	        31.00 file-MB	18688929 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       5	 248969033 ns/op	        31.00 file-MB	18688936 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       5	 247381367 ns/op	        31.00 file-MB	18688929 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       4	 255491500 ns/op	        31.00 file-MB	18688932 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       4	 254569667 ns/op	        31.00 file-MB	18688932 B/op	     104 allocs/op
+BenchmarkSave/gob-8               	       4	 266971875 ns/op	        31.00 file-MB	18688912 B/op	     104 allocs/op
+BenchmarkLoad/open/binary-8       	   51510	     23682 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   56793	     37829 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   20668	     51421 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   26516	     42090 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   30705	     38936 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   40065	     34146 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   40450	     27805 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   46185	     21803 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   63676	     21963 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/binary-8       	   49056	     22237 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/open/gzip-8         	      58	  18593553 ns/op	21103419 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      68	  17038981 ns/op	21103412 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      70	  16731977 ns/op	21103412 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      69	  16892510 ns/op	21103410 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      64	  22986468 ns/op	21103422 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      57	  19518699 ns/op	21103411 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      67	  17793644 ns/op	21103411 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      60	  19731928 ns/op	21103411 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      66	  17425754 ns/op	21103415 B/op	      14 allocs/op
+BenchmarkLoad/open/gzip-8         	      68	  17355177 ns/op	21103409 B/op	      14 allocs/op
+BenchmarkLoad/open/text-8         	      33	  34884924 ns/op	21058120 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      32	  36042643 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      32	  36218263 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      31	  36597470 ns/op	21058111 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      32	  37066525 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      31	  35692423 ns/op	21058111 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      31	  34897398 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      32	  35077956 ns/op	21058107 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      33	  35103968 ns/op	21058114 B/op	       9 allocs/op
+BenchmarkLoad/open/text-8         	      33	  35058965 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     158	   7522086 ns/op	20007419 B/op	      18 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     156	   7932174 ns/op	20006489 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     122	   9266356 ns/op	20006388 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     150	   7756709 ns/op	20006405 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     148	   7876914 ns/op	20006403 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     133	   8921484 ns/op	20006398 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     147	   7834676 ns/op	20006404 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     148	   7800276 ns/op	20006397 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     163	   7264238 ns/op	20006427 B/op	      16 allocs/op
+BenchmarkLoad/open/text-mmap-8    	     170	   7043148 ns/op	20006402 B/op	      16 allocs/op
+BenchmarkLoad/open/csv-8          	      10	 124521200 ns/op	141957891 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       8	 150395594 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 142159815 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       8	 126729010 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 117056111 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 117375722 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       8	 129657938 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 121863143 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 120612389 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/csv-8          	       9	 121016732 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/open/json-8         	       3	 427187555 ns/op	221056402 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 418437667 ns/op	221056392 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 419391986 ns/op	221056408 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 446053306 ns/op	221056408 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 535697667 ns/op	221056397 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       2	 662791521 ns/op	221056408 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       2	 794581354 ns/op	221056400 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       2	 694224125 ns/op	221056400 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 421966722 ns/op	221056424 B/op	 7000012 allocs/op
+BenchmarkLoad/open/json-8         	       3	 417220639 ns/op	221056413 B/op	 7000012 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 284878427 ns/op	161125664 B/op	 1000247 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 283465365 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 293329490 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 283775875 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 282836677 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 292015042 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 275698531 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 276060260 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 274830719 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/open/gob-8          	       4	 277019365 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/binary-8   	     754	   1618555 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     744	   1661306 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     729	   1614697 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     705	   1754748 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     753	   1600269 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     746	   1607006 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     735	   1611089 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     724	   1667640 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     711	   1635741 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/binary-8   	     750	   1588709 ns/op	     472 B/op	       5 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      63	  17485945 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      66	  17452759 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      68	  17367834 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      66	  17425827 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      68	  17374536 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      68	  17485761 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      66	  18047683 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      62	  18552443 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      63	  18055222 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/gzip-8     	      64	  18995234 ns/op	21103408 B/op	      14 allocs/op
+BenchmarkLoad/read-all/text-8     	      32	  51201026 ns/op	21058107 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      28	  45094394 ns/op	21058128 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      32	  38471629 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      30	  43688926 ns/op	21058118 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      31	  37795703 ns/op	21058107 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      30	  37385835 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      31	  36852349 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      32	  36685906 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      32	  38708906 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-8     	      32	  35067283 ns/op	21058104 B/op	       9 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     156	   7643031 ns/op	20006392 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     150	   7911621 ns/op	20006392 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     150	   7947300 ns/op	20006381 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     100	  11011926 ns/op	20006405 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     100	  13463825 ns/op	20006395 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	      92	  12661731 ns/op	20006395 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	      87	  13712376 ns/op	20006397 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     120	   9687844 ns/op	20006402 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	     100	  10699808 ns/op	20006406 B/op	      16 allocs/op
+BenchmarkLoad/read-all/text-mmap-8         	      74	  14065010 ns/op	20006389 B/op	      16 allocs/op
+BenchmarkLoad/read-all/csv-8               	       9	 149239736 ns/op	141957942 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       9	 120947273 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       9	 141191620 ns/op	141957954 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       7	 170235923 ns/op	141957992 B/op	 2000019 allocs/op
+BenchmarkLoad/read-all/csv-8               	       7	 165862351 ns/op	141957928 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       7	 150601512 ns/op	141957928 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       8	 163212521 ns/op	141957964 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       8	 139916208 ns/op	141957880 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       9	 159624458 ns/op	141957942 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/csv-8               	       9	 160227972 ns/op	141957929 B/op	 2000018 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 602976166 ns/op	221056568 B/op	 7000013 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 584038730 ns/op	221056632 B/op	 7000014 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 509556521 ns/op	221056408 B/op	 7000012 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 527152083 ns/op	221056512 B/op	 7000013 allocs/op
+BenchmarkLoad/read-all/json-8              	       3	 535225375 ns/op	221056546 B/op	 7000013 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 603624208 ns/op	221056624 B/op	 7000014 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 628865542 ns/op	221056616 B/op	 7000014 allocs/op
+BenchmarkLoad/read-all/json-8              	       3	 493796333 ns/op	221056568 B/op	 7000013 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 525157270 ns/op	221056640 B/op	 7000014 allocs/op
+BenchmarkLoad/read-all/json-8              	       2	 520003084 ns/op	221056736 B/op	 7000015 allocs/op
+BenchmarkLoad/read-all/gob-8               	       3	 355598347 ns/op	161125754 B/op	 1000247 allocs/op
+BenchmarkLoad/read-all/gob-8               	       3	 371897056 ns/op	161125680 B/op	 1000247 allocs/op
+BenchmarkLoad/read-all/gob-8               	       3	 338776833 ns/op	161125754 B/op	 1000247 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 313608854 ns/op	161125764 B/op	 1000247 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 310776667 ns/op	161125596 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 298560636 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 300297635 ns/op	161125568 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 296644240 ns/op	161125628 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 298839000 ns/op	161125596 B/op	 1000246 allocs/op
+BenchmarkLoad/read-all/gob-8               	       4	 293960406 ns/op	161125652 B/op	 1000246 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     129	   9187121 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     130	   9206004 ns/op	21053955 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     129	   9246697 ns/op	21053953 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     128	   9291369 ns/op	21053950 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     130	   9078532 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     100	  10043801 ns/op	21053947 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     100	  10243110 ns/op	21053954 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     126	   9415186 ns/op	21053947 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     126	   9386076 ns/op	21053953 B/op	       7 allocs/op
+BenchmarkOpen/only/copy-loop-8             	     121	   9714772 ns/op	21053953 B/op	       7 allocs/op
+BenchmarkOpen/only/read-once-8             	     385	   3073818 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     392	   2943715 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     427	   2918602 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     399	   3092001 ns/op	20005274 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     392	   3049305 ns/op	20005274 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     394	   3097994 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     385	   3044665 ns/op	20005277 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     400	   3255960 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     340	   3375080 ns/op	20005276 B/op	       5 allocs/op
+BenchmarkOpen/only/read-once-8             	     433	   3057174 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/only/mmap-8                  	   54842	     29640 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   48271	     24365 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   51571	     23067 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   37219	     36377 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   59439	     26597 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   52984	     22016 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   49744	     26355 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   52305	     22592 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   58276	     20802 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/only/mmap-8                  	   61426	     20543 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     108	  10479525 ns/op	21053951 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     132	   9433143 ns/op	21053945 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     126	   9524298 ns/op	21053951 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     133	   8994878 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     100	  10535240 ns/op	21053949 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     126	   9331692 ns/op	21053952 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     134	   8925034 ns/op	21053947 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     132	   9051612 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     132	   9081836 ns/op	21053949 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/copy-loop-8       	     100	  10830874 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     404	   2954323 ns/op	20005276 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     406	   2976978 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     396	   3088260 ns/op	20005277 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     384	   3147996 ns/op	20005277 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     381	   2963480 ns/op	20005277 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     420	   3034558 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     391	   3119087 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     382	   3156713 ns/op	20005276 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     367	   3300439 ns/op	20005278 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/read-once-8       	     397	   2917344 ns/op	20005277 B/op	       5 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   33582	     38822 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   29251	     36267 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   33056	     36611 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   28161	     39350 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   29416	     40721 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   29122	     44166 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   24622	     46378 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   27535	     44411 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   29085	     38832 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/one-lookup/mmap-8            	   33628	     36595 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     123	   9510009 ns/op	21053950 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     127	   9428194 ns/op	21053947 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     122	   9669678 ns/op	21053952 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     123	   9646631 ns/op	21053949 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     100	  10108385 ns/op	21053949 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     126	   9729318 ns/op	21053950 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     112	  10239372 ns/op	21053950 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     121	  10233948 ns/op	21053948 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     109	  10851609 ns/op	21053956 B/op	       7 allocs/op
+BenchmarkOpen/read-all/copy-loop-8         	     118	  10048789 ns/op	21053952 B/op	       7 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     303	   3947098 ns/op	20005280 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     292	   4047877 ns/op	20005274 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     286	   4111247 ns/op	20005279 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     297	   4042825 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     292	   4094164 ns/op	20005280 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     272	   4174707 ns/op	20005279 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     286	   4099726 ns/op	20005275 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     302	   3999332 ns/op	20005279 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     292	   3981620 ns/op	20005278 B/op	       5 allocs/op
+BenchmarkOpen/read-all/read-once-8         	     300	   4085636 ns/op	20005280 B/op	       5 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     535	   1944551 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     646	   2026059 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     664	   2107746 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     676	   1865924 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     675	   1814652 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     669	   1815046 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     682	   2008496 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     668	   1779150 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     651	   1795152 ns/op	     472 B/op	       6 allocs/op
+BenchmarkOpen/read-all/mmap-8              	     682	   1789624 ns/op	     472 B/op	       6 allocs/op
+BenchmarkTextDecode/1-core-8               	      43	  23848055 ns/op	20005013 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  23849196 ns/op	20005016 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  23566402 ns/op	20005014 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  23508728 ns/op	20005016 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  23535729 ns/op	20005014 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      49	  23441971 ns/op	20005008 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  24136803 ns/op	20005010 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      45	  24782771 ns/op	20005030 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  24584273 ns/op	20005012 B/op	       4 allocs/op
+BenchmarkTextDecode/1-core-8               	      50	  25002863 ns/op	20005016 B/op	       4 allocs/op
+BenchmarkTextDecode/all-cores-8            	     171	   7142171 ns/op	20005986 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     164	   6831196 ns/op	20005936 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     193	   6249720 ns/op	20005952 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     183	   6431497 ns/op	20005939 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     195	   6034707 ns/op	20005958 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     198	   6977775 ns/op	20005951 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     146	   7848796 ns/op	20005936 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     146	   8338159 ns/op	20005924 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     145	   7753038 ns/op	20005935 B/op	      11 allocs/op
+BenchmarkTextDecode/all-cores-8            	     181	   6968373 ns/op	20005931 B/op	      11 allocs/op
+BenchmarkTextView/open-8                   	   35425	     34271 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   34675	     34033 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   34879	     35731 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   33463	     34604 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   34780	     35691 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   32958	     36564 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   33526	     37094 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   31509	     37661 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   32616	     36614 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/open-8                   	   33451	     36678 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   29973	     40618 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   30739	     40107 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   33728	     38061 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   32023	     36835 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   31810	     40408 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   31706	     38070 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   32826	     36674 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   30744	     37127 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   34249	     35643 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/one-lookup-8             	   33880	     36789 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      34	  32133511 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      43	  29302243 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      40	  28743165 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      37	  28147092 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      44	  28440951 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      42	  28371605 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      39	  28313399 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      43	  28108245 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      42	  27926746 ns/op	     432 B/op	       5 allocs/op
+BenchmarkTextView/read-all-8               	      42	  28238525 ns/op	     432 B/op	       5 allocs/op
+PASS
+ok  	evmgraph/cacher	439.936s
+PASS
+ok  	evmgraph/evm	0.768s

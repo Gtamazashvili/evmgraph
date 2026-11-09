@@ -1,0 +1,16 @@
+# Generated, never committed: the dataset, build output and Task's state.
+/cache/
+/bin/
+/.task/
+# A binary `go build ./cmd/evmgraph` leaves in the project folder.
+/evmgraph
+# Test binaries, profiles and coverage output.
+*.test
+*.out
+*.prof
+# Operating system and editor files.
+.DS_Store
+.idea/
+.vscode/
+# The company's brief stays private; the README describes the task instead.
+/docs/task-brief.pdf

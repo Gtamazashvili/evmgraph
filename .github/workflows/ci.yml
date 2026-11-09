@@ -1,0 +1,43 @@
+# Checks every push and pull request: formatting, go vet, the tests with the
+# race detector, that the container tests compile, and that the image builds.
+# The container tests themselves run with `task test:docker`: they generate
+# 20M addresses three times and need a few minutes of a machine with Docker.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Formatting
+        run: |
+          files=$(gofmt -l .)
+          if [ -n "$files" ]; then
+            echo "not formatted:"; echo "$files"; exit 1
+          fi
+      - name: Vet
+        run: go vet ./...
+      - name: Tests, with the race detector
+        run: go test -race -count=1 ./...
+      - name: The container tests compile
+        working-directory: tests/docker
+        run: go vet ./...
+
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the image
+        run: docker build -t evmgraph .
+      - name: The image runs
+        run: docker run --rm evmgraph help

@@ -1,0 +1,12 @@
+date:      2026-11-06 21:20:09 +04
+go:        go version go1.26.3 darwin/arm64
+os:        Darwin 25.5.0
+macos:     26.5
+cpu:       Apple M1 Pro, 6 performance + 2 efficiency cores
+memory:    17179869184 bytes
+power:     AC Power
+load:      23.93 12.61 8.45  (1, 5, 15 min; before the run)
+runs:      10 of each benchmark, -p 1
+command:   go test ./... -run '^$' -bench . -benchmem -count 10 -p 1
+load after: 11.93 14.61 11.15  (1, 5, 15 min; measured by hand right after the run)
+note:      Docker Desktop's virtual machine started about 8 minutes into this run and used about 110% CPU, and another project's tests ran at the same time; results marked noisy were disturbed by them
